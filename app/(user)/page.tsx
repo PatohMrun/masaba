@@ -1,9 +1,8 @@
 'use client'
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
-import { useTheme } from "next-themes";
 import ThemeSwitch from "@/components/ThemeSwitch";
-import { FaFaceSmileWink, FaLaptopCode, FaDatabase, FaBars, FaXmark } from "react-icons/fa6";
+import { FaLaptopCode, FaDatabase, FaBars, FaXmark } from "react-icons/fa6";
 import emailjs from "emailjs-com";
 
 export default function Home() {
@@ -49,7 +48,7 @@ export default function Home() {
         setSuccessMessage("Message sent successfully!");
         setFormData({ from_name: "", reply_to: "", subject: "", message: "" }); // Reset form
       })
-      .catch((error) => {
+      .catch(() => {
         setErrorMessage("Failed to send message. Please try again later.");
       })
       .finally(() => {
@@ -144,7 +143,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             <h1 className="text-md md:text-xl font-bold text-gray-900 dark:text-gray-200">
-              Hi, I'm Michael Wanje
+              Hi, I&apos;m Michael Wanje
             </h1>
             <nav className="hidden md:block">
               <NavLinks />
@@ -188,7 +187,7 @@ export default function Home() {
             <div className="mt-4 lg:mt-0">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">Full Stack Web Developer & Aspiring Data Scientist</h2>
               <p className="text-lg leading-relaxed max-w-3xl">
-                I hold a Bachelor of Science degree in Software Engineering from the University of Eastern Africa, Baraton, and I'm also a Microsoft Certified Educator. I specialize in modern technologies like Python, Flask, Vue.js, JavaScript, and databases such as MySQL and PostgreSQL.
+                I hold a Bachelor of Science degree in Software Engineering from the University of Eastern Africa, Baraton, and I&apos;m also a Microsoft Certified Educator. I specialize in modern technologies like Python, Flask, Vue.js, JavaScript, and databases such as MySQL and PostgreSQL.
               </p>
             </div>
           </div>

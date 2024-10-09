@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import { useState, useEffect, useRef } from 'react';
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Image from 'next/image';
 import ThemeSwitch from './ThemeSwitch';
 import { useTheme } from "next-themes";
@@ -10,7 +10,7 @@ import { MdMenuOpen, MdClose } from "react-icons/md";
 
 const Navbar: React.FC = () => {
     const pathname = usePathname();
-    const router = useRouter();
+    // const router = useRouter();
     const [isOpen, setIsOpen] = useState(false);
     const [currentLogo, setCurrentLogo] = useState<string>('/images/Logo2.png');
     const { theme, systemTheme } = useTheme();
