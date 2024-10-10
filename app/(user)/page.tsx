@@ -306,11 +306,6 @@ export default function Home() {
           </form>
         </section>
       </main>
-
-      {/* Footer */}
-      <footer className="text-center py-6 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200">
-        © {new Date().getFullYear()} Michael Wanje
-      </footer>
     </div>
   );
 }

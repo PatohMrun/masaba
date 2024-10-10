@@ -10,7 +10,6 @@ import { MdMenuOpen, MdClose } from "react-icons/md";
 
 const Navbar: React.FC = () => {
     const pathname = usePathname();
-    // const router = useRouter();
     const [isOpen, setIsOpen] = useState(false);
     const [currentLogo, setCurrentLogo] = useState<string>('/images/Logo2.png');
     const { theme, systemTheme } = useTheme();
