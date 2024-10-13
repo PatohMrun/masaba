@@ -3,7 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import ThemeSwitch from "@/components/ThemeSwitch";
-import { FaLaptopCode, FaDatabase, FaBars, FaXmark } from "react-icons/fa6";
+import { FaLaptopCode, FaDatabase, FaBars, FaXmark, FaMobile } from "react-icons/fa6";
+import { FaCodeBranch } from "react-icons/fa";
+import { SiFramework } from "react-icons/si";
+import { AiTwotoneApi } from "react-icons/ai";
 import emailjs from "emailjs-com";
 import Experience from "@/components/Experience";
 
@@ -216,7 +219,7 @@ export default function Home() {
             {/* Skill 2 */}
             <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <div className="flex items-center space-x-4 mb-4">
-                <FaLaptopCode className="text-green-500 dark:text-green-400" size={40} />
+                <SiFramework className="text-green-500 dark:text-green-400" size={40} />
                 <h4 className="text-xl font-bold text-gray-900 dark:text-gray-200">Frameworks</h4>
               </div>
               <p className="text-gray-700 dark:text-gray-400 mb-3">Vue.js, Flutter, Django</p>
@@ -240,7 +243,7 @@ export default function Home() {
             {/* Skill 4 */}
             <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <div className="flex items-center space-x-4 mb-4">
-                <FaDatabase className="text-cyan-500 dark:text-cyan-400" size={40} />
+                <FaCodeBranch className="text-cyan-500 dark:text-cyan-400" size={40} />
                 <h4 className="text-xl font-bold text-gray-900 dark:text-gray-200">Version Control</h4>
               </div>
               <p className="text-gray-700 dark:text-gray-400 mb-3">Git, GitHub</p>
@@ -251,7 +254,7 @@ export default function Home() {
             {/* Skill 5 */}
             <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <div className="flex items-center space-x-4 mb-4">
-                <FaDatabase className="text-pink-500 dark:text-pink-400" size={40} />
+                <FaMobile className="text-pink-500 dark:text-pink-400" size={40} />
                 <h4 className="text-xl font-bold text-gray-900 dark:text-gray-200">Mobile Development</h4>
               </div>
               <p className="text-gray-700 dark:text-gray-400 mb-3">Android Studio</p>
@@ -263,7 +266,7 @@ export default function Home() {
             {/* Skill 6 */}
             <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <div className="flex items-center space-x-4 mb-4">
-                <FaDatabase className="text-yellow-500 dark:text-yellow-400" size={40} />
+                <AiTwotoneApi className="text-yellow-500 dark:text-yellow-400" size={40} />
                 <h4 className="text-xl font-bold text-gray-900 dark:text-gray-200">API Development & Integration</h4>
               </div>
               <p className="text-gray-700 dark:text-gray-400 mb-3">Postman, RESTful APIa, GraphQL</p>
