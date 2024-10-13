@@ -1,9 +1,11 @@
 'use client'
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import ThemeSwitch from "@/components/ThemeSwitch";
 import { FaLaptopCode, FaDatabase, FaBars, FaXmark } from "react-icons/fa6";
 import emailjs from "emailjs-com";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -106,7 +108,7 @@ export default function Home() {
           Skills
         </a>
       </li>
-      <li>
+      {/* <li>
         <a
           href="#projects"
           className="block py-2"
@@ -114,7 +116,7 @@ export default function Home() {
         >
           Projects
         </a>
-      </li>
+      </li> */}
       <li>
         <a
           href="#experience"
@@ -139,7 +141,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-500">
       {/* Header */}
-      <header className="sticky top-0 z-10 bg-white dark:bg-gray-800 shadow-md">
+      <header className="top-0 z-10 bg-white dark:bg-gray-800 shadow-md">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             <h1 className="text-md md:text-xl font-bold text-gray-900 dark:text-gray-200">
@@ -177,7 +179,7 @@ export default function Home() {
         <section className="text-gray-800 dark:text-gray-300 mb-16">
           <div className="flex flex-col lg:flex-row items-center lg:items-start">
             <Image
-              src="/images/Mrun.jpg"
+              src="/images/Wanje.jpg"
               alt="Michael Wanje"
               width={300}
               height={300}
@@ -187,8 +189,9 @@ export default function Home() {
             <div className="mt-4 lg:mt-0">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">Full Stack Web Developer & Aspiring Data Scientist</h2>
               <p className="text-lg leading-relaxed max-w-3xl">
-                I hold a Bachelor of Science degree in Software Engineering from the University of Eastern Africa, Baraton, and I&apos;m also a Microsoft Certified Educator. I specialize in modern technologies like Python, Flask, Vue.js, JavaScript, and databases such as MySQL and PostgreSQL.
+                I hold a Bachelor of Science degree in Software Engineering from the University of Eastern Africa, Baraton, and I&apos;m also a Microsoft Certified Educator. I specialize in modern technologies like Python, Java, Vue.js, JavaScript, and databases such as MySQL and PostgreSQL.
               </p>
+              <Link href={"Wanje.pdf"} className="inline-block mt-4 bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded" download={true}>Download CV</Link>
             </div>
           </div>
         </section>
@@ -197,37 +200,89 @@ export default function Home() {
         <section className="mb-16" id="skills">
           <h3 className="text-2xl lg:text-3xl font-semibold text-gray-900 dark:text-gray-200 mb-6">Core Skills</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
             {/* Skill 1 */}
             <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <div className="flex items-center space-x-4 mb-4">
-                <FaLaptopCode className="text-blue-500 dark:text-blue-400" size={40} />
-                <h4 className="text-xl font-bold text-gray-900 dark:text-gray-200">Web Development</h4>
+                <FaLaptopCode className="text-red-500 dark:text-red-400" size={40} />
+                <h4 className="text-xl font-bold text-gray-900 dark:text-gray-200">Programming Languages</h4>
               </div>
-              <p className="text-gray-700 dark:text-gray-400 mb-3">Vue.js, JavaScript, Flask</p>
+              <p className="text-gray-700 dark:text-gray-400 mb-3">Python, Dart, Java, JavaScript</p>
               <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                <div className="bg-blue-500 h-2 rounded-full" style={{ width: '90%' }}></div>
+                <div className="bg-red-500 h-2 rounded-full" style={{ width: '90%' }}></div>
               </div>
             </div>
+         
             {/* Skill 2 */}
             <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <div className="flex items-center space-x-4 mb-4">
-                <FaDatabase className="text-green-500 dark:text-green-400" size={40} />
-                <h4 className="text-xl font-bold text-gray-900 dark:text-gray-200">Databases</h4>
+                <FaLaptopCode className="text-green-500 dark:text-green-400" size={40} />
+                <h4 className="text-xl font-bold text-gray-900 dark:text-gray-200">Frameworks</h4>
               </div>
-              <p className="text-gray-700 dark:text-gray-400 mb-3">MySQL, PostgreSQL</p>
+              <p className="text-gray-700 dark:text-gray-400 mb-3">Vue.js, Flutter, Django</p>
               <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                <div className="bg-green-500 h-2 rounded-full" style={{ width: '80%' }}></div>
+                <div className="bg-green-500 h-2 rounded-full" style={{ width: '90%' }}></div>
               </div>
             </div>
+
+            {/* Skill 3 */}
+            <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div className="flex items-center space-x-4 mb-4">
+                <FaDatabase className="text-blue-500 dark:text-blue-400" size={40} />
+                <h4 className="text-xl font-bold text-gray-900 dark:text-gray-200">Databases</h4>
+              </div>
+              <p className="text-gray-700 dark:text-gray-400 mb-3">MySQL, PostgreSQL, SQLite</p>
+              <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                <div className="bg-blue-500 h-2 rounded-full" style={{ width: '80%' }}></div>
+              </div>
+            </div>
+            
+            {/* Skill 4 */}
+            <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div className="flex items-center space-x-4 mb-4">
+                <FaDatabase className="text-cyan-500 dark:text-cyan-400" size={40} />
+                <h4 className="text-xl font-bold text-gray-900 dark:text-gray-200">Version Control</h4>
+              </div>
+              <p className="text-gray-700 dark:text-gray-400 mb-3">Git, GitHub</p>
+              <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                <div className="bg-cyan-500 h-2 rounded-full" style={{ width: '75%' }}></div>
+              </div>
+            </div>
+            {/* Skill 5 */}
+            <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div className="flex items-center space-x-4 mb-4">
+                <FaDatabase className="text-pink-500 dark:text-pink-400" size={40} />
+                <h4 className="text-xl font-bold text-gray-900 dark:text-gray-200">Mobile Development</h4>
+              </div>
+              <p className="text-gray-700 dark:text-gray-400 mb-3">Android Studio</p>
+              <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                <div className="bg-pink-500 h-2 rounded-full" style={{ width: '90%' }}></div>
+              </div>
+            </div>
+            
+            {/* Skill 6 */}
+            <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div className="flex items-center space-x-4 mb-4">
+                <FaDatabase className="text-yellow-500 dark:text-yellow-400" size={40} />
+                <h4 className="text-xl font-bold text-gray-900 dark:text-gray-200">API Development & Integration</h4>
+              </div>
+              <p className="text-gray-700 dark:text-gray-400 mb-3">Postman, RESTful APIa, GraphQL</p>
+              <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                <div className="bg-yellow-500 h-2 rounded-full" style={{ width: '80%' }}></div>
+              </div>
+            </div>
+
+
+
             {/* Add more skills as needed */}
           </div>
         </section>
 
-        {/* Projects Section */}
+        {/* Projects Section
         <section className="mb-16" id="projects">
           <h3 className="text-2xl lg:text-3xl font-semibold text-gray-900 dark:text-gray-200 mb-6">Notable Projects</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Project 1 */}
+            Project 1
             <div className="relative p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md group overflow-hidden">
               <h4 className="text-xl font-bold text-gray-900 dark:text-gray-200 mb-2">Project Name</h4>
               <p className="text-gray-700 dark:text-gray-400 mb-4">Brief description of the project.</p>
@@ -235,22 +290,18 @@ export default function Home() {
                 <a href="#" className="text-white bg-blue-500 px-6 py-3 rounded-md hover:bg-blue-600 transition-colors">View Project</a>
               </div>
             </div>
-            {/* Add more projects as needed */}
+            Add more projects as needed
           </div>
-        </section>
+        </section> */}
 
         {/* Experience Section */}
-        <section className="mb-16" id="experience">
+        <section id="experience">
           <h3 className="text-2xl lg:text-3xl font-semibold text-gray-900 dark:text-gray-200 mb-6">Experience</h3>
-          <div className="space-y-8">
-            <div className="border-l-4 border-blue-500 pl-6 py-2">
-              <h4 className="text-xl font-bold text-gray-900 dark:text-gray-200 mb-1">Company Name</h4>
-              <p className="text-gray-700 dark:text-gray-400 mb-2">Position Held • Jan 2021 - Present</p>
-              <p className="text-gray-700 dark:text-gray-400">Description of responsibilities and achievements.</p>
-            </div>
-            {/* Add more experiences as needed */}
-          </div>
+          <Experience company = "University of Eastern Africa, Baraton (Department of Accounting)" position = "Office Assistant" year = "September 2024 - Present" description = "Supports day-to-day activites in the office." />
+          
+          <Experience company = "Microsoft Teals Program" position = "Volunteer Trainer" year = "January 2024 - Present" description = "Incharge of teaching high school students at Meteitei School basic concepts in Computer Science" />
         </section>
+
 
         {/* Contact Section */}
         <section id="contact">
