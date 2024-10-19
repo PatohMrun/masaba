@@ -36,11 +36,7 @@ export default function Home() {
     setErrorMessage("");
     setIsSubmitting(true);
 
-    // EmailJS service ID, template ID, and user ID from your EmailJS dashboard
-    // const serviceId = "service_tfq53ut";
-    // const templateId = "template_b7l3xoa";
-    // const userId = "gU9smyfJtTdde9Qyk";
-
+   
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
     const userId = process.env.NEXT_PUBLIC_EMAILJS_USER_ID!;
